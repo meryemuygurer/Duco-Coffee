@@ -8,8 +8,7 @@ stickyIcon.addEventListener('mouseover', function() {
 });
 
 stickyIcon.addEventListener('mouseout', function() {
-    stickyIcon.style.width = '70px'; // Mouse çıkışında boyutu eski değerine geri çevirin
-});
+    stickyIcon.style.width = '70px'; 
 
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-ul');
@@ -34,17 +33,12 @@ document.addEventListener('click', function(event) {
     }
 }); 
 
-// HTML'den kahve-dd li elementlerini seçin
 const kahveLiElements = document.querySelectorAll(".kahve-dd li");
 
-// Her bir kahve-dd li elementine tıklanabilirlik ekleyin
 kahveLiElements.forEach((liElement) => {
-  // Tıklama işlemi olduğunda çalışacak işlevi tanımlayın
   liElement.addEventListener("click", function() {
-    // İlgili bağlantıyı alın
     const linkElement = liElement.querySelector("a");
 
-    // Eğer bağlantı varsa, bağlantıya yönlendirin
     if (linkElement) {
       const url = linkElement.getAttribute("href");
       window.location.href = url;
